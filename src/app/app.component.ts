@@ -27,7 +27,9 @@ export class AppComponent {
 
 
   ngOnInit() {
-    this.executets();
+    // this.executeBoolean();
+    // this.executeLoop();
+    this.executeIfLoop();
   }
   constructor() {
 
@@ -62,7 +64,7 @@ export class AppComponent {
 
 
 
-  executets() {
+  executeBoolean() {
     const nombre: string = "Samantha";
     const numero: number = 4;
     const arriveNumero: number[] = [3, 25, 1000, -5, 6];
@@ -131,8 +133,35 @@ export class AppComponent {
 
 
 
+  executeLoop() {
+    const arrLoopEx: string[] = ["Hola","Mundo","hola otra vez","Clase","6"];
+
+    for (let index = 0; index < arrLoopEx.length; index++) {
+      const element = arrLoopEx[index];
+      console.log(element);
+
+    }
 
 
+  }
+
+  executeIfLoop() {
+
+    const arrComp1:any[] = ["Hola","28","True","Mundo",];
+    const arrComp2:any[] = ["Sol","Luna","Estrella","Marte","28","Hola","Mundo"];
+
+      for (let i = 0; i < arrComp1.length; i++) {
+        const element1 = arrComp1[i];
+        
+        for (let j = 0; j < arrComp2.length; j++) {
+          const element2 = arrComp2[j];
+          
+          if(element1===element2) {
+            console.log("la posición",i,"del primer array y la posición del segundo array", j ,"son iguales")
+          }
+        }
+      }
+  }
 
 
 
